@@ -1,0 +1,32 @@
+<div class="container my-5 mx-auto w-50 ">
+    <h1 class="text-center text-uppercase ">Chi tiết điện thoại</h1>
+    <div class="row">
+        <div class="col-md-12 mb-2">
+            <label for="" class="form-label ">ID:</label><br>
+            <input type="text" class="form-control " ng-model="input.id" disabled >
+        </div>
+        <div class="col-md-12 mb-2">
+            <label for="" class="form-label ">Tên:</label><br>
+            <input type="text" class="form-control " ng-model="input.ten" disabled> 
+            <span class="text-danger " ng-show="err.ten">{{err.ten}}</span>
+        </div>
+        <div class="col-md-12 mb-2">
+            <label for="" class="form-label ">Hãng:</label><br>
+            <select name="" id="" ng-model="input.hang" class="form-select " disabled>
+                <option value="">Chọn hãng</option>
+                <option value="{{h.id}}" ng-repeat="h in hangs"> {{h.name}}</option>
+            </select>
+            <span class="text-danger " ng-show="err.hang">{{err.hang}}</span>
+        </div>
+        <div class="col-md-12 mb-2">
+            <label for="" class="form-label ">Giá:</label><br>
+            <input type="text" class="form-control " ng-model="input.gia" disabled>
+            <span class="text-danger " ng-show="err.gia">{{err.gia}}</span>
+        </div>
+        <div class="col-md-12 mb-2 text-center ">
+            <a href="#!/list-phone" class="btn btn-primary ">Quay lại</a>
+            <a href="#!/edit/phone/{{input.id}}" class="btn btn-warning  ">Sửa</a>
+            
+        </div>
+    </div>
+</div>

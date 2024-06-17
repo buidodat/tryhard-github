@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý điện thoại</title>
+    <link rel="stylesheet" href="asset/style.css">
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-route.js"></script>
+</head>
+<body ng-app="myController">
+    <header><a href="#!/list-phone">Danh sách sản phẩm</a></header>
+    <main ng-view></main>
+    <footer></footer>
+</body>
+<script src="route/route.js"></script>
+<script src="controllers/ListController.js"></script>
+<script src="controllers/AddController.js"></script>
+<script src="controllers/DetailController.js"></script>
+<script src="controllers/EditController.js"></script>
+</html>

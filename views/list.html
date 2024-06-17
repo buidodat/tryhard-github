@@ -1,0 +1,35 @@
+<div class="container my-5 mx-auto ">
+    <h1 class="text-center text-uppercase ">Danh sách sản phẩm</h1>
+    <div class="text-end">
+        <a href="#!/add/phone" class="btn btn-success ">Thêm</a>
+    </div>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên</th>
+                <th>Hãng</th>
+                <th>Giá</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in products">
+                <td>{{p.id}}</td>
+                <td>{{p.ten}}</td>
+                <td>
+                    <span ng-show="p.hang ==1">Apple</span>
+                    <span ng-show="p.hang ==2">Samsung</span>
+                    <span ng-show="p.hang ==3">Oppo</span>
+                </td>
+                <td>{{p.gia}}</td>
+                <td>
+                    <button class="btn btn-primary " ng-click="onDetail(p.id)">Chi tiết</button>
+                    <button class="btn btn-warning  " ng-click="onEdit(p.id)">Sửa</button>
+                    <button class="btn btn-danger  " ng-click="onDelete(p.id)">Xóa</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
